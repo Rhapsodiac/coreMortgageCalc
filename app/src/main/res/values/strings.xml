@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="title_activity_tip_calculator">Tip Calculator</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="label_mortgage_amount">Mortgage Amount</string>
+    <string name="mortgage_amount"></string>
+
+    <string name="labelInterestRate">Annual Interest Rate</string>
+    <string name="annual_interest_rate"></string>
+    <string name="increase">+</string>
+    <string name="calculate">Calculate</string>
+    <string name="etMortgageLength"></string>
+    <string name="tvMonthlyInterestRate"></string>
+    
+    <string name="label_length">Mortgage Length</string>
+    <string name="length">years</string>
+
+    <string name="label_total_payback">Total Pay Back</string>
+    <string name="total_amount">$0.00</string>
+    <string name="label_monthly_payment">Monthly Payment</string>
+
+    <string name ="label_percent_sign">%</string>
+    <string name ="label_term">Term (years)</string>
+    <string name ="tvTerm"></string>
+    <string name="tvMonthlyPayment"></string>
+    <string name="tvTotalPayBack"></string>
+    <string name ="label_monthly_interest">Monthly Rate</string>
+    <string name ="label_dollar_sign">$</string>
+
+
+</resources>

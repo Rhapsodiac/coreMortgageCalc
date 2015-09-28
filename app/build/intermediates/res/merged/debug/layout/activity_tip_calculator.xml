@@ -1,0 +1,256 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <!-- The bill amount -->
+
+    <TextView
+        android:id="@+id/label_mortgage_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/label_mortgage_amount"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etMortgageAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/label_mortgage_amount"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:text="@string/mortgage_amount"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/label_interest_rate"
+        android:layout_toEndOf="@+id/label_interest_rate"
+        android:gravity="center">
+
+        <requestFocus />
+    </EditText>
+
+    <!-- The tip percent -->
+
+    <TextView
+        android:id="@+id/label_interest_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/label_mortgage_amount"
+        android:layout_below="@+id/label_mortgage_amount"
+        android:padding="10dp"
+        android:text="@string/labelInterestRate"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLength"
+        android:layout_below="@+id/label_interest_rate"
+        android:layout_alignLeft="@+id/etAnnInterestRate"
+        android:layout_alignStart="@+id/etAnnInterestRate"
+        android:layout_toLeftOf="@+id/tvLength"
+        android:layout_toStartOf="@+id/tvLength"
+        android:text="@string/etMortgageLength"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textStyle="normal"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/etAnnInterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:padding="5dp"
+        android:text="@string/annual_interest_rate"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:textStyle="normal"
+        android:layout_alignLeft="@+id/etMortgageAmount"
+        android:layout_alignStart="@+id/etMortgageAmount"
+        android:layout_toStartOf="@+id/tvLength"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/tvLength"
+        android:layout_below="@+id/etMortgageAmount" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:text="@string/calculate"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    Button
+        android:id="@+id/percentUpButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="@string/increase"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/percentDownButton"
+        android:layout_toRightOf="@+id/percentDownButton" />
+
+    <!-- the tip amount -->
+    
+    <TextView
+        android:id="@+id/label_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/label_length"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/etLength"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/length"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/etLength"
+        android:layout_alignRight="@+id/etMortgageAmount"
+        android:layout_alignEnd="@+id/etMortgageAmount" />
+
+    <!-- the total -->
+    
+    <TextView
+        android:id="@+id/label_term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/label_term"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/label_monthly_payment" />
+
+    <TextView
+        android:id="@+id/tvTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/tvTerm"
+        android:textSize="20sp"
+        android:gravity="left"
+        android:layout_alignBaseline="@+id/label_term"
+        android:layout_alignBottom="@+id/label_term"
+        android:layout_alignLeft="@+id/tvMonthlyPayment"
+        android:layout_alignStart="@+id/tvMonthlyPayment"
+        android:layout_toStartOf="@+id/textView3"
+        android:layout_toRightOf="@+id/tvMonthlyPayment" />
+
+    <TextView
+        android:id="@+id/Label_Monthly_Interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/label_monthly_interest"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/btnCalculate" />
+
+    <TextView
+        android:id="@+id/label_total_payback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/label_total_payback"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/label_term" />
+
+    <TextView
+        android:id="@+id/label_monthly_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/label_monthly_payment"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/Label_Monthly_Interest" />
+
+    <TextView
+        android:id="@+id/tvMonthlyInterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/tvMonthlyInterestRate"
+        android:textSize="20sp"
+        android:gravity="left"
+        android:layout_below="@+id/btnCalculate"
+        android:layout_alignStart="@id/etLength"
+        android:layout_alignRight="@+id/tvMonthlyPayment"
+        android:layout_alignEnd="@+id/tvMonthlyPayment" />
+
+    <TextView
+        android:id="@+id/tvTotalPayback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/tvTotalPayBack"
+        android:textSize="20sp"
+        android:gravity="left"
+        android:layout_alignBottom="@+id/label_total_payback"
+        android:layout_alignLeft="@+id/tvTerm"
+        android:layout_alignStart="@+id/tvTerm"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/tvMonthlyPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/tvMonthlyPayment"
+        android:textSize="20sp"
+        android:gravity="left"
+        android:layout_alignTop="@+id/label_monthly_payment"
+        android:layout_alignLeft="@+id/etLength"
+        android:layout_alignStart="@+id/etLength"
+        android:layout_alignRight="@+id/tvLength"
+        android:layout_alignEnd="@+id/tvLength" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/length"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_alignTop="@+id/label_term"
+        android:layout_toEndOf="@id/tvLength"
+        android:layout_alignBottom="@+id/tvTerm" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/label_percent_sign"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/etAnnInterestRate"
+        android:layout_toRightOf="@+id/etAnnInterestRate"
+        android:layout_toEndOf="@+id/etAnnInterestRate" />
+
+</RelativeLayout><!-- From: file:/C:/Users/Taylor/AndroidStudioProjects/ch03_TipCalculator1/app/src/main/res/layout/activity_tip_calculator.xml -->
